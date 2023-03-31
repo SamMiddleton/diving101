@@ -1,11 +1,17 @@
-import * as D from '../../common/diver'
+import { Diver } from '../../common/diver'
 
-export default function Diver(diver: D.Diver) {
+interface Props {
+  diversData: Diver
+}
+
+export default function Diver(props: Props) {
+  const { name, age, qualification } = props.diversData
+
   return (
     <div>
-      <p>{diver.name}</p>
-      <p>{diver.age}</p>
-      <p>{diver.qualification}</p>
+      <p>{name}</p>
+      <p>{age}</p>
+      <p>{qualification}</p>
     </div>
   )
 }
